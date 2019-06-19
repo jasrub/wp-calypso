@@ -8,12 +8,12 @@ import classNames from 'classnames';
 import { debounce, noop, uniqueId } from 'lodash';
 import i18n from 'i18n-calypso';
 import Gridicon from 'gridicons';
+import { Spinner } from '@wordpress/components';
 
 /**
  * Internal dependencies
  */
 import analytics from 'lib/analytics';
-import Spinner from 'components/spinner';
 import { isMobile } from 'lib/viewport';
 import TranslatableString from 'components/translatable/proptype';
 

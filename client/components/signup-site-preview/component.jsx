@@ -9,12 +9,12 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 import { localize, translate } from 'i18n-calypso';
+import { Spinner } from '@wordpress/components';
 
 /**
  * Internal dependencies
  */
 import SignupSitePreviewIframe from 'components/signup-site-preview/iframe';
-import Spinner from 'components/spinner';
 
 /**
  * Style dependencies
@@ -110,7 +110,7 @@ export class SignupSitePreview extends Component {
 			<div className={ className } style={ this.props.resize ? wrapperHeightStyle : null }>
 				<div className="signup-site-preview__iframe-wrapper">
 					{ isPhone ? <MockupChromeMobile /> : <MockupChromeDesktop /> }
-					{ ! this.state.isLoaded && <Spinner size={ isPhone ? 20 : 40 } /> }
+					{ ! this.state.isLoaded && <Spinner /> }
 					<SignupSitePreviewIframe
 						{ ...this.props }
 						setIsLoaded={ this.setIsLoaded }

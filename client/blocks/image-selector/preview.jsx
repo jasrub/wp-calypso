@@ -10,6 +10,7 @@ import { isEqual, uniq } from 'lodash';
 import classNames from 'classnames';
 import Gridicon from 'gridicons';
 import { localize } from 'i18n-calypso';
+import { Spinner } from '@wordpress/components';
 
 /**
  * Internal dependencies
@@ -18,7 +19,6 @@ import Button from 'components/button';
 import ImagePreloader from 'components/image-preloader';
 import MediaActions from 'lib/media/actions';
 import MediaStore from 'lib/media/store';
-import Spinner from 'components/spinner';
 import { url } from 'lib/media/utils';
 
 export class ImageSelectorPreview extends Component {
