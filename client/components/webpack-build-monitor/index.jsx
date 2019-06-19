@@ -11,7 +11,7 @@ import { find, startsWith } from 'lodash';
 /**
  * Internal dependencies
  */
-import Spinner from 'components/spinner';
+import { Spinner } from '@wordpress/components';
 
 /**
  * Style dependencies
@@ -119,7 +119,7 @@ class WebpackBuildMonitor extends React.PureComponent {
 					'is-warning': needsReload,
 				} ) }
 			>
-				{ isBusy && <Spinner size={ 11 } className="webpack-build-monitor__spinner" /> }
+				{ isBusy && <Spinner className="webpack-build-monitor__spinner" /> }
 				{ getMessage( this.state ) }
 			</div>
 		);
